@@ -43,11 +43,11 @@
     	<p>One things user may notice is the lack of network communication between the Google Chrome extension and the Android app. Although it could possibly make the system more convenient to use, we decided against implenting this for various reasons. By taking out any possibility of network communication, the security of the key exchange simply becomes a matter of ensuring physical security, typing the key in discretely, rather than a matter of software or network security.</p>
     	<h1>Future Features</h1>
     		<ul>
-    			<li><b>Backup Service:</b></li>
-    			<li><b>Account Recovery:</b></li>
-    			<li><b>Cloud Services:</b></li>
-    			<li><b>Customizable Password Generation:</b></li>
-    			<li><b>iOS App:</b></li>
+    			<li><b>Backup Service: </b>Currently, there is no backup system for our extension. If a user or attacker uninstalls the extension, we do not have a way to export the passwords or import the passwords for future use.</li>
+    			<li><b>Account Recovery: </b>If a user loses the smart phone originally associated with the extension, then there is no way to access your accounts. One solution that Google provides is to allow the users to print a sheet of pre-defined pins that they can use one time to temporarily allow them access to their accounts. A similar mechanism to allow a user to make their accounts available should be developed for this extension that is both secure and still convenient.</li>
+    			<li><b>Cloud Services: </b>Currently the passwords are only available on the original machine they are associated with. By implementing communication with cloud storage, all the passwords should be available from any machine while still having the security of two factor authentication.</li>
+    			<li><b>Customizable Password Generation: </b>Different websites require different constraints on their passwords. For example, some require special symbols and some do not allow it at all. Allowing the user to modify which constraints are required would make the system much more accessable to users.</li>
+    			<li><b>iOS App: </b>We chose to create an Android app as a prototype because of expertise within our team. Because there is large population of consumers using Apple devices, it would be ideal to create an iOS port.</li>
     		</ul>
     	<h1>Possible Attacks on the System</h1>
     	<p>The whole system is based on the protection of the key generated when the app first opens. The extension and the app uses this key to encrypt and decrypt messages. If for whatever reason this key is modified, then the whole system will fail.</p>
