@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSCE 522 Security Project: DeVuTo 2FA</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">DeVuTo Two Factor Authentication</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="setup.html">Instructions</a></li>
+					<li><a href="discussion.html">Discussion</a></li>
+					<li><a href="https://github.com/huttotw/2fa-password-keeper">Extension Code</a></li>
+					<li><a href="https://github.com/dv297/2FA-Decoder">App Code</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+	</nav>
+
+    <div class="jumbotron">
+      <div class="container">
+      	<div class="col-md-6">
+	        <h1>Setup</h1>
+	        <p>Setup is easy! Follow this step by step guide to help you get started!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    	<div class="row">
+    		<h2 class="text-center">Setup</h2>
+    	</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>To begin, install the Google Chrome extension. Once the extension is installed, a new icon will be created in your Chrome toolbar.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/icon_screenshot.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>Then, install the Android app and open the app. A key will be presented to you. Leave this window open.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image01.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>From there, we will need to set your master password and your key by right clicking the extension icon and selecting "Options".</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/options_screenshot.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>Enter in a master password that you can remember, and type in the key presented to you by the Android app.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image03.png"/></div>
+		</div>
+
+		<div class="row">
+    		<h2 class="text-center">Account Registration</h2>
+    	</div>		
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+		    	<p>When you sign up for a site, go to the site and click on the lock icon. A popup window will appear giving you a secure password. Use this password as the password for your sign up. Click "Copy and Save" to save this password and to copy it to your clipboard to make signing up easier.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image07.png"/></div>
+		</div>
+
+    	<div class="row instruction-row">
+    		<h4 class="text-center">Once you have installed the extension to Google Chrome and the app to your Android device, and setup the various options, here's how easy it is to login to your sites using our system.</h4>
+    	</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>Go to the site and click the lock icon. A popup will appear asking for your master password.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/master_password_screenshot.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>After entering your master password, a barcode will appear. Open the Android app, click the "Scan" button, and scan the barcode using your Android device.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image00.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>After entering your master password, a barcode will appear. Open the Android app, click the "Scan" button, and scan the barcode using your Android device.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image00.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>A pin will appear. Enter your pin into the extension and the saved password will appear for you to use!</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/result_screenshot.png"/></div>
+		</div>
+    </div>
+
+	<footer class="footer">
+		<p class="text-center">Done for completion of CSCE 522</p>
+	</footer>
+
+
+</body>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

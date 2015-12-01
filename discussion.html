@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSCE 522 Security Project: DeVuTo 2FA</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">DeVuTo Two Factor Authentication</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="setup.html">Instructions</a></li>
+					<li><a href="discussion.html">Discussion</a></li>
+					<li><a href="https://github.com/huttotw/2fa-password-keeper">Extension Code</a></li>
+					<li><a href="https://github.com/dv297/2FA-Decoder">App Code</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+	</nav>
+
+    <div class="jumbotron">
+      <div class="container">
+  		<h1>Discussion</h1>
+  		<em><p>What are some of the design decisions you made?</p></em>
+  		<em><p>How complete is this project?</p></em>
+  		<em><p>Are you planning on changes in the future?</p></em>
+      </div>
+    </div>
+
+    <div class="container">
+    	<h1>A Note on the Idea of Internet Usage</h1>
+    	<p>One things user may notice is the lack of network communication between the Google Chrome extension and the Android app. Although it could possibly make the system more convenient to use, we decided against implenting this for various reasons. By taking out any possibility of network communication, the security of the key exchange simply becomes a matter of ensuring physical security, typing the key in discretely, rather than a matter of software or network security.</p>
+    	<h1>Future Features</h1>
+    		<ul>
+    			<li><b>Backup Service:</b></li>
+    			<li><b>Account Recovery:</b></li>
+    			<li><b>Cloud Services:</b></li>
+    			<li><b>Customizable Password Generation:</b></li>
+    			<li><b>iOS App:</b></li>
+    		</ul>
+    	<h1>Possible Attacks on the System</h1>
+    	<p>The whole system is based on the protection of the key generated when the app first opens. The extension and the app uses this key to encrypt and decrypt messages. If for whatever reason this key is modified, then the whole system will fail.</p>
+    	<p>With this in mind, we can discuss some possible areas for attack.</p>
+    	<ul>
+    		<li><b>Attacker obtaining the key:</b></li>
+    		<p>If the attacker is present when the key is generated on the screen of the app, it could be possible for them to copy the key. We leave it as a responsibility of the user to ensure that no one is watching them enter the key.</p>
+    		<p>It may be possible for the attacker to obtain the key from the local storage of the extension. This was considered and is a security trade off based on the scope and timeframe of the project. Physical protection of computer containing the extension should be a top priority of the user. </p>
+
+    		<p>It is also possible for an attacker if they access the local storage of the Android device. Accessing the SQLite database of the app requires root privileges on the device. We leave it to the user to prevent attackers from having access to both the Android device and computer having the Google Chrome extension.</p>
+
+    		<li><b>Phishing:</b></li>
+    		<p>Phishing is an attempt by an attacker to disguise themselves as a trustworthy entity in order to obtain sensitive information. Often, attackers will create websites that are visually similar to popular websites with URL's that resemble the original website's URL. If a user is not observant, they may accidentally give away their credentials to this fake websites</p>
+    		<p>Our extension does its best to prevent phishing attempts by only presenting the appropriate passwords to URL's that are equivalent to the URL stored by the extension. However, various features of web languages, such as Javascript and HTML5, can help attackers alter the URL's of a fake page without notifying the user. Future versions of the system could use some tests and assertions to verify webpage and notify the user if they are not on the intended site.</p>
+    		</p>
+		</ul>
+
+    </div>
+
+	<footer class="footer">
+		<p class="text-center">Done for completion of CSCE 522</p>
+	</footer>
+
+</body>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

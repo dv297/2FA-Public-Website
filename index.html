@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSCE 522 Security Project: DeVuTo 2FA</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">DeVuTo Two Factor Authentication</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="setup.html">Instructions</a></li>
+					<li><a href="discussion.html">Discussion</a></li>
+					<li><a href="https://github.com/huttotw/2fa-password-keeper">Extension Code</a></li>
+					<li><a href="https://github.com/dv297/2FA-Decoder">App Code</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+	</nav>
+
+    <div class="jumbotron">
+      <div class="container">
+      	<div class="col-md-6">
+	        <em><h2 class="text-danger">"What's my password again?"</h2></em>
+	        <p>With all of the accounts needed for day to day life, it is getting tougher and tougher to maintain and remember strong, unique passwords</p>
+	        <p>We're trying to create a way to manage all these accounts in one place, while also ensuring your own personal security</p>
+        </div>
+        <div class="col-md-6">
+	        <div class="embed-responsive embed-responsive-4by3">
+	  			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Dz-hrJY5Q9E" frameborder="0" allowfullscreen></iframe>
+	        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    	<div class="row">
+    		<h1 class="text-center">The Idea</h1>
+    		<p>There are many accounts we have to manage these days. Between our work and personal email accounts and social networking, the amount of our personal information on the Internet is continuing to grow. Each account requires a password, and the growing trend among uninformed users is to either use the same password on multiple accounts, create insecure passwords, or even store passwords in plaintext for anyone to see.</p>
+    		<p>In addition, it is getting easier for attackers, through social engineering or technical weaknesses to break through weaker passwords. Two factor authentication, the process of authenticating using a physical object in addition to your password, is a popular way to increase the protection of your accounts.</p>
+    		<p>Our idea is simple: Let our extension manage your account passwords. The extension generates strong passwords for you to use and stores them so that you do not have to remember them. Then, you remember one master password. From there, each time you want to login to an account, you enter your master password and authenticate using your Android device, and the extension will  retrieve the appropriate password for you. </p>
+    		<h3 class="text-center">It's that easy!</h3>
+    	</div>
+    	<div class="row">
+    		<h1 class="text-center">How it Works</h1>
+    	</div>
+
+    	<div class="row">
+    		<h3 class="text-center">There are two parts of the project</h3>
+    	</div>
+		<div class="row">
+    		<div class="col-md-6">
+    			<div class="row"><img class="center-block" src="img/chrome-icon.png"/></div>
+    			<div class="row"><h4 class="text-center">Google Chrome Extension</h4></div>
+    		</div>
+    		<div class="col-md-6">
+    			<div class="row"><img class="center-block" src="img/android-icon.png"/></div>
+    			<div class="row"><h4 class="text-center">Android App</h4></div>
+    		</div>
+		</div>
+
+
+
+    	<div class="row">
+    		<h4 class="text-center">Once you have installed the extension to Google Chrome and the app to your Android device, and <a href="setup.html">setup the key and master password</a>, here's how easy it is to login to your sites using our system.</h4>
+    	</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>Go to the site and click the lock icon. A popup will appear asking for your master password.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/master_password_screenshot.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>After entering your master password, a barcode will appear. Open the Android app, click the "Scan" button, and scan the barcode using your Android device.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image00.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>After entering your master password, a barcode will appear. Open the Android app, click the "Scan" button, and scan the barcode using your Android device.</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/image00.png"/></div>
+		</div>
+
+		<div class="row instruction-row">
+			<div class="col-md-4">
+				<p>A pin will appear. Enter your pin into the extension and the saved password will appear for you to use!</p>
+			</div>
+			<div class="col-md-8"><img class="instruction-img img-responsive" src="img/result_screenshot.png"/></div>
+		</div>
+
+
+    	<div class="row">
+    		<h1 class="text-center">Want to learn more?</h1>
+    		<p>Head to our <a href="discussion.html">discussion page</a> where we discuss the strengths, weaknesses, and desired future features of this system</p>
+    	</div>
+    	<div class="row">
+    		<h1 class="text-center">The Team</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+				<img class="img-responsive img-circle" src="img/vu.png"/>
+			</div>
+    		<div class="col-md-3">
+    			<h2>Daniel Vu</h2>
+    		</div>
+    		<div class="col-md-1">
+				<img class="img-responsive img-circle" src="img/hutto.jpg"/>
+			</div>
+			<div class="col-md-3">
+				<h2>Trevor Hutto</h2>
+			</div>
+			<div class="col-md-1">
+				<img class="img-responsive img-circle" src="img/jong.jpg"/>
+			</div>
+    		
+    		<div class="col-md-3">
+    			<h2>Dion de Jong</h2>
+    		</div>
+    	</div>
+    </div>
+
+	<footer class="footer">
+		<p class="text-center">Done for completion of CSCE 522</p>
+	</footer>
+
+</body>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
